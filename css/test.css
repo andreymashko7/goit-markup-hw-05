@@ -1,0 +1,39 @@
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.menu-item {
+  margin-right: 15px;
+  outline: 2px solid tomato;
+  position: relative;
+}
+
+.menu-item:hover .sub-menu {
+  display: block;
+}
+
+.menu-link {
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: teal;
+  color: #fff;
+  display: block;
+}
+
+.sub-menu {
+  top: 100%;
+  width: 100%;
+  position: absolute;
+  padding: 0;
+  margin-right: 0;
+  list-style: none;
+  background-color: #ccc;
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
