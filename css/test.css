@@ -1,39 +1,51 @@
-.menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-}
-
-.menu-item {
-  margin-right: 15px;
-  outline: 2px solid tomato;
+.btn {
   position: relative;
-}
-
-.menu-item:hover .sub-menu {
-  display: block;
-}
-
-.menu-link {
-  padding: 10px 20px;
-  text-decoration: none;
+  display: inline-flex;
+  margin: 0;
+  padding: 10px 30px;
+  border: none;
   background-color: teal;
-  color: #fff;
-  display: block;
+  color: white;
+  border-radius: 3px;
+  font-size: inherit;
+  transform: translateY(50px);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
-.sub-menu {
-  top: 100%;
-  width: 100%;
+.btn::before,
+.btn::after {
+  content: '';
+  display: inline-flex;
+
+  width: 20px;
+  height: 20px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn::before {
   position: absolute;
-  padding: 0;
-  margin-right: 0;
-  list-style: none;
-  background-color: #ccc;
-  display: none;
+  top: 50%;
+  right: 30px;
+  transform: translateY(calc(-50% + 35px));
+  background-color: red;
+}
+.btn::after {
+  margin-left: 5px;
+
+  background-color: blue;
 }
 
-a {
-  text-decoration: none;
+.btn:hover::before {
+  transform: translateY(calc(-50%));
+}
+
+.btn:hover::after {
+  transform: translateY(-35px);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: palevioletred;
+  color: blue;
 }
